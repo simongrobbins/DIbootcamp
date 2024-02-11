@@ -4,19 +4,17 @@ function playTheGame() {
         let userNumber = parseFloat(prompt ("enter a number 1-10"))
 
         if (isNaN (userNumber)) {
-            alert ('Sorry Not a number, Goodbye') 
-        } else if ((userNumber <= 10) && (userNumber >= 0)){
-
-
-    } else if (isNaN (userNumer)){
+            alert ('Sorry this is not a number, Goodbye') 
+        } else if ((userNumber <= 10) && (userNumber >= 1)){
+         let computerNumber = ((Math.floor(Math.random() * 10))+1)
+        compareNumbers(userNumber, computerNumber)
+        }
+    } else if (answer == false) {
         alert ('No problem, Goodbye');
-    }
-    const computerNumber = (Math.floor(Math.random() * 11))
-    console.log(computerNumber);
-    compareNumbers(userNumber, computerNumber)
-
 
     }
+
+
 }
 function compareNumbers(userNumber,computerNumber) {
     let attempts = 1
